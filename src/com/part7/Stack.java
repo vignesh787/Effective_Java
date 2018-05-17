@@ -5,7 +5,7 @@ import java.util.EmptyStackException;
 
 public class Stack {
 
-    Object[] entries;
+    private Object[] entries;
 
     private int size = 0;
 
