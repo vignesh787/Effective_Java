@@ -14,19 +14,19 @@ public class Stack {
     /**
      * Constructor
      */
-    public Stack(){
+    public Stack() {
         entries = new Object[INITIAL_SIZE];
 
     }
 
-    public void push(Object e){
-       // check for size before pushing
+    public void push(Object e) {
+        // check for size before pushing
         ensureSize();
-            entries[size++] = e;
+        entries[size++] = e;
     }
 
-    public Object pop(){
-        if(size == 0 ){
+    public Object pop() {
+        if (size == 0) {
             throw new EmptyStackException();
         }
         Object result = entries[--size];
@@ -34,9 +34,10 @@ public class Stack {
         return result;
     }
 
-    public void ensureSize(){
-        if(entries.length == size){
-            Arrays.copyOf(entries,2*(size + 1));
-    }
+    public void ensureSize() {
+        if (entries.length == size) {
+            Arrays.copyOf(entries, 2 * (size + 1));
+        }
 
+    }
 }
